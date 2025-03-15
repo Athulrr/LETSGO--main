@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.heading}>Let&apos;s Go</h1>
+      <h1 style={styles.heading}>Let&apos;s Go11</h1>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="masonry-grid"
