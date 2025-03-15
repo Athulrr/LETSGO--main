@@ -97,7 +97,7 @@ const ADD = () => {
   const addHandler = () => {
     // Ensure Image URL is included in formData
     axios
-      .post(`${import.meta.env.THIS-IS}/a`, formData) // Send data to the backend
+      .post(`${import.meta.env.THIS}/a`, formData) // Send data to the backend
       .then((res) => {
         alert(res.data.message); // Show success message from backend
         navigate("/Admin"); // Navigate to Admin page after success

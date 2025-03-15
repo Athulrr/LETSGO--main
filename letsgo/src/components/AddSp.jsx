@@ -71,7 +71,7 @@ const AddPlace = () => {
   
     try {
       setUploading(true); // Set uploading state to true while the image uploads
-      await axios.post(`${import.meta.env.THIS-IS}/a`, formData, {
+      await axios.post(`${import.meta.env.THIS}/a`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
   
@@ -88,7 +88,7 @@ const AddPlace = () => {
 
   const addHandler = () => {
     axios
-      .post(`${import.meta.env.THIS-IS}/a`, formData)
+      .post(`${import.meta.env.THIS}/a`, formData)
       .then((res) => {
         alert(res.data.message);
         navigate("/Admin"); // Navigate to Admin after successful form submission

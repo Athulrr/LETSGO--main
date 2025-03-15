@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.THIS-IS}v`)
+      .get(`${import.meta.env.THIS}v`)
       .then((response) => {
         const acceptedPlaces = response.data.filter((place) => place.status === "accepted");
         setHome(acceptedPlaces);

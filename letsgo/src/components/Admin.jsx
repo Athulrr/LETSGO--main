@@ -7,7 +7,7 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.THIS-IS}v`)
+      .get(`${import.meta.env.THIS}v`)
       .then((response) => {
         setPlaces(response.data);
       })
@@ -17,7 +17,7 @@ const Admin = () => {
   const fetchUpdatedPlaces = () => {
     // After a place is accepted or rejected, refresh the list
     axios
-      .get(`${import.meta.env.THIS-IS}v`)
+      .get(`${import.meta.env.THIS}v`)
       .then((response) => {
         setPlaces(response.data); // Update places with the new list
       })
