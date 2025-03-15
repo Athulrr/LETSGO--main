@@ -9,8 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: process.env.FRONTEND_URL,
-    credentials: true,
+    credentials: true
   }));
+  
 
 // POST route to upload an image and save the place data
 app.post("/a", upload.single("Image"), async (req, res) => {
