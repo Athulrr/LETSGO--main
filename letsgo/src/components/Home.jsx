@@ -8,9 +8,9 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.THIS}view`)
+      .get(`${import.meta.env.THIS}v`)
       .then((response) => {
-        const acceptedPlaces = response.data.filter((place) => place.status === "accepted");
+        const acceptedPlaces = response.data.data.filter((place) => place.status === "accepted");
         setHome(acceptedPlaces);
       })
       .catch((error) => console.error('Error fetching data:', error));
