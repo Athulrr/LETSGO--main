@@ -31,15 +31,17 @@ app.post("/a", upload.single("Image"), async (req, res) => {
 
 
 // Fetch all places (GET route)
+// Fetch all places (GET route)
 app.get("/v", async (req, res) => {
     try {
         const places = await Addmodel.find(); // Fetch all places from the database
-        res.status(200).send(places); // Send all places as response
+        res.status(200).send({ data: places }); // Send data as an object
     } catch (error) {
         console.error("Error fetching data:", error);
         res.status(500).send({ message: "Error fetching places data" });
     }
 });
+
 
 // Accept a place (PUT route)
 app.put("/accept/:id", async (req, res) => {
